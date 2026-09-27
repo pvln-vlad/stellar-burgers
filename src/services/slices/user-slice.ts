@@ -96,6 +96,9 @@ export const userSlice = createSlice({
         state.isAuthChecked = true;
         state.error = null;
       })
+      .addCase(registerUser.rejected, (state, action) => {
+        state.error = action.error.message ?? 'Не удалось зарегистрироваться';
+      })
       .addCase(getUser.fulfilled, (state, action) => {
         state.user = action.payload;
         state.isAuthChecked = true;

@@ -24,7 +24,7 @@ import {
 } from '@slices/ingredients-slice';
 import { authChecked, getUser } from '@slices/user-slice.ts';
 import { Preloader } from '@ui';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { useEffect } from 'react';
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 
@@ -48,7 +48,7 @@ const App = (): React.JSX.Element => {
 
   useEffect(() => {
     void dispatch(getIngredients());
-    if (getCookie('accessToken')) {
+    if (getCookie('accessToken') || localStorage.getItem('refreshToken')) {
       void dispatch(getUser());
     } else {
       dispatch(authChecked());

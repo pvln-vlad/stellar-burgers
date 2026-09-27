@@ -4,7 +4,7 @@ import {
   ProfileIcon,
   Logo,
 } from '@krgaa/react-developer-burger-ui-components';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { NavLink } from 'react-router-dom';
 
 import type { TAppHeaderUIProps } from './type';
@@ -18,14 +18,14 @@ export const AppHeaderUI = ({ userName }: TAppHeaderUIProps): React.JSX.Element 
         <NavLink
           to="/"
           end
-          className={({ isActive }) => (isActive ? styles.link_active : styles.link)}
+          className={({ isActive }) => clsx(styles.link, isActive && styles.link_active)}
         >
           <BurgerIcon type={'primary'} />
           <p className="text text_type_main-default ml-2 mr-10">Конструктор</p>
         </NavLink>
         <NavLink
           to="/feed"
-          className={({ isActive }) => (isActive ? styles.link_active : styles.link)}
+          className={({ isActive }) => clsx(styles.link, isActive && styles.link_active)}
         >
           <ListIcon type={'primary'} />
           <p className="text text_type_main-default ml-2">Лента заказов</p>
@@ -37,7 +37,7 @@ export const AppHeaderUI = ({ userName }: TAppHeaderUIProps): React.JSX.Element 
       <div className={styles.link_position_last}>
         <NavLink
           to="/profile"
-          className={({ isActive }) => (isActive ? styles.link_active : styles.link)}
+          className={({ isActive }) => clsx(styles.link, isActive && styles.link_active)}
         >
           <ProfileIcon type={'primary'} />
           <p className="text text_type_main-default ml-2">

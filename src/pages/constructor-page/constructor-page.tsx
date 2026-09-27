@@ -1,5 +1,5 @@
 import { BurgerIngredients, BurgerConstructor } from '@components';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 import styles from './constructor-page.module.css';
 
