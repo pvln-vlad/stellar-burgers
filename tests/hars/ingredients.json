@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "data": [
+    {
+      "_id": "01",
+      "name": "Булка",
+      "type": "bun",
+      "proteins": 10,
+      "fat": 20,
+      "carbohydrates": 30,
+      "calories": 250,
+      "price": 100,
+      "image": "https://example.com/bun.png",
+      "image_large": "https://example.com/bun-large.png",
+      "image_mobile": "https://example.com/bun-mobile.png"
+    },
+    {
+      "_id": "02",
+      "name": "Говяжья котлета",
+      "type": "main",
+      "proteins": 25,
+      "fat": 15,
+      "carbohydrates": 5,
+      "calories": 300,
+      "price": 200,
+      "image": "https://example.com/meat.png",
+      "image_large": "https://example.com/meat-large.png",
+      "image_mobile": "https://example.com/meat-mobile.png"
+    }
+  ]
+}
