@@ -102,7 +102,7 @@ describe('редюсер слайса constructorSlice', () => {
       ],
     });
   });
-  test('[#7] clearConstructor удаляет ингрединты и булку', () => {
+  test('[#7] clearConstructor удаляет ингредиенты и булку', () => {
     const result = reducer(
       { bun: { ...mockBun, id: 'bun' }, ingredients: [{ ...mockMain, id: '1' }] },
       clearConstructor()
